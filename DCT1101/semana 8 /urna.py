@@ -17,7 +17,7 @@ Para votar digite:
 print(texto_escolhas)
 
 for i in range(total):
-    voto = int(input(f"{i+1}° a votar. Em quem você vota: "))
+    voto = int(input(f"{i+1}° pessoa a votar. Em quem você vota: "))
     
     match voto:
         case 1: 
@@ -28,17 +28,20 @@ for i in range(total):
             mousse += 1
         case _:
             print("Valor incorreto.")
+            # i -= 1
             
+perctB = bolo / total * 100
+perctS = sorvete / total * 100
+perctM = mousse / total * 100
+
 texto_reslt = f"""
 Votações encerradas.
 
-Bolo recebeu {bolo} votos
-Sorvete recebeu {sorvete} votos
-Mousse recebeu {mousse} votos
+Foram entrevistadas {total} pessooas.
+
+Bolo recebeu {bolo} votos, totalizanado {perctB:.1f}% dos votos.
+Sorvete recebeu {sorvete} votos, totalizando {perctS:.1f}% dos votos.
+Mousse recebeu {mousse} votos, totalizando {perctM:.1f}% dos votos.
 """
 
 print(texto_reslt)
-
-
-
-
