@@ -27,8 +27,16 @@ for i in range(total):
         case 3:
             mousse += 1
         case _:
-            print("Valor incorreto.")
-            # i -= 1
+            print("Valor incorreto. Vote novamente")
+            i = i - 1
+            voto = int(input(f"{i+2}° pessoa a votar. Em quem você vota: "))
+            # match voto:
+            #     case 1: 
+            #         bolo += 1
+            #     case 2:
+            #         sorvete += 1
+            #     case 3:
+            #         mousse += 1
             
 perctB = bolo / total * 100
 perctS = sorvete / total * 100
